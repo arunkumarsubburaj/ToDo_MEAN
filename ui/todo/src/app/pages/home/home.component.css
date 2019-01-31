@@ -1,0 +1,77 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: calc(25% - 20px);
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: calc(50% - 20px);
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.column-area {
+  margin: 10px;
+}
+
+.footer-button-row {
+  display: flex;
+  justify-content: space-around;
+  height: 45px;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.footer-button-row>button {
+  width: calc(100% / 3);
+  height: 100%;
+  border-right: 1px solid #ccc;
+  border-radius: 0;
+  cursor: pointer;
+  border-collapse: collapse;
+}
+
+.footer-button-row>button:hover {
+  background: #ccc;
+}
+
+.footer-button-row>button:last-child {
+  border: 0;
+}
+
+.no-notes-msg {
+  font-size: 30px;
+  color: #555;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+div#notes-container .column {
+  margin: 5px;
+  padding: 5px;
+}

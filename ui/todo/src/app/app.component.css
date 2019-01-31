@@ -1,0 +1,16 @@
+:host {
+  background: green;
+  display: block;
+  height: 100%;
+}
+
+app-header,
+app-footer {
+  height: 45px;
+  display: block;
+}
+
+app-content-area {
+  display: block;
+  height: calc(100% - 90px);
+}

@@ -1,0 +1,31 @@
+<mat-sidenav-container class="todo-container">
+  <mat-sidenav mode="side" opened>
+    <mat-action-list>
+      <button mat-list-item [routerLink]="['/home']">
+        <mat-icon mat-list-icon>note</mat-icon>
+        <h4 mat-line>Notes</h4>
+      </button>
+      <mat-divider *ngIf='notes'></mat-divider>
+      <h3 mat-subheader *ngIf='notes'>Hash Tags</h3>
+      <button mat-list-item *ngFor="let note of notes" [routerLink]="['/hashtag']">
+        <mat-icon mat-list-icon>
+          label
+        </mat-icon>
+        <h4 mat-line>{{note.name}}</h4>
+      </button>
+      <mat-divider *ngIf='notes'></mat-divider>
+      <button mat-list-item [routerLink]="['/archive']">
+        <mat-icon mat-list-icon>archive</mat-icon>
+        <h4 mat-line>Archive</h4>
+      </button>
+      <button mat-list-item [routerLink]="['/bin']">
+        <mat-icon mat-list-icon>delete</mat-icon>
+        <h4 mat-line>Bin</h4>
+      </button>
+    </mat-action-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet>
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

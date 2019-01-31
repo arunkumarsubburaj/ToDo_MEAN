@@ -1,0 +1,22 @@
+<mat-card class="add-note-card mat-elevation-z6">
+  <mat-card-content>
+    <input type="hidden" [(ngModel)]="objId" name="objId" #cardId />
+    <mat-form-field class="add-note-form-field card-title">
+      <input matInput type="text" placeholder="Title" [(ngModel)]="value" #cardTitle>
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="add-note-form-field card-desc">
+      <textarea matInput placeholder="Leave a comment" [(ngModel)]="textAreaValue" #cardDesc></textarea>
+      <button mat-button *ngIf="textAreaValue" matSuffix mat-icon-button aria-label="Clear" (click)="textAreaValue=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color='primary' (click)="addTodoItem()" *ngIf="objId?.length==0">ADD</button>
+    <button mat-raised-button color='primary' *ngIf="objId?.length>0" (click)="updateTodoItem()">UPDATE</button>
+    <button mat-raised-button color='warn' (click)='resetItems()'>CANCEL</button>
+  </mat-card-actions>
+</mat-card>

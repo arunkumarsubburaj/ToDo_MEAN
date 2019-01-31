@@ -1,0 +1,5 @@
+/db/*
+/server/node_modules/
+/ui/todo/e2e/
+/ui/toto/node_modules/
+/.vscode

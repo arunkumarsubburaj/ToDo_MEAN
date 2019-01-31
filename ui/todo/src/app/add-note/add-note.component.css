@@ -1,0 +1,19 @@
+.add-note-form-field {
+  width: 100%;
+}
+
+:host {
+  width: 60%;
+  display: inline-block;
+  position: relative;
+  margin: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.add-note-card mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px !important;
+}

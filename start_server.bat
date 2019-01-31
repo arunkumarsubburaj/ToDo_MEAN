@@ -1,0 +1,1 @@
+mongod.exe --port 5000 --dbpath E:\Learning\ToDo_MEAN\db

@@ -1,0 +1,23 @@
+.todo-container {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 265px;
+}
+
+mat-sidenav-content {
+  width: calc(100% - 265px);
+}
+
+.mat-list-item h4.mat-line {
+  text-align: left !important;
+}
+
+mat-action-list button.mat-list-item:hover {
+  background: #f3f1f1;
+}
+
+mat-sidenav mat-action-list.mat-list.mat-list-base {
+  padding: 0;
+}
